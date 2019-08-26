@@ -18,7 +18,12 @@ function MaxSQ(strArr) {
 
 
 }
-
+if(document.getElementById('parameter_0').checked){
+    document.getElementById('parameter_0n').disabled = true;
+  }
+  if(document.getElementById('parameter_1').checked){
+    document.getElementById('parameter_0n1').disabled = true;
+  }
 //console.log(MaxSQ(["0111", "1101", "0111"]));
 //console.log(MaxSQ(["0111", "1111", "1111", "1111"]));
 //console.log(MaxSQ(["10100", "10111", "11111", "10010"]));
