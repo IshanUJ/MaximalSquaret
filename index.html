@@ -5,8 +5,6 @@
 <head>
   <title>MaximalSquare</title>
   <link rel="stylesheet" href="resources/css/a.css">
-  <!-- <link rel="stylesheet" href="assets/css/bootstrap.min.css">
-  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous"> -->
 </head>
 
 <body>
@@ -15,45 +13,19 @@
     <!-- <p id="demo"></p>
     <p id="demo1"></p>
     <p id="demo2"></p> -->
-    <!-- <div class="container">
-      <div class="row">
-        <div class="col-sm"></div>
-        <div class="col-sm"> -->
+    <div class="p_testing_background" style="margin-left:20px;"> 
+         Enter a Value <input type="number" id="prod" autofocus />
+    </div>
+   <p>
+        <input type="button" id="bt" value="Create Checkbox" onclick="createChk(prod)" />
+    </p>
+      
 
-          <div class="p_testing_background" style="margin-left:20px;">
-            <input type="checkbox" id="r11" name="vehicle1" value="">
-            <input type="checkbox" id="r12" name="vehicle1" value="">
-            <input type="checkbox" id="r13" name="vehicle1" value="">
-            <input type="checkbox" id="r14" name="vehicle1" value="">
-          </div>
-          <div class="p_testing_background" style="margin-left:20px;">
-            <input type="checkbox" id="r21" name="vehicle1" value="">
-            <input type="checkbox" id="r22" name="vehicle1" value="">
-            <input type="checkbox" id="r23" name="vehicle1" value="">
-            <input type="checkbox" id="r24" name="vehicle1" value="">
-          </div>
-          <div class="p_testing_background" style="margin-left:20px;">
-            <input type="checkbox" id="r31" name="vehicle1" value="">
-            <input type="checkbox" id="r32" name="vehicle1" value="">
-            <input type="checkbox" id="r33" name="vehicle1" value="">
-            <input type="checkbox" id="r34" name="vehicle1" value="">
-          </div>
-          <div class="p_testing_background" style="margin-left:20px;">
-            <input type="checkbox" id="r41" name="vehicle1" value="">
-            <input type="checkbox" id="r42" name="vehicle1" value="">
-            <input type="checkbox" id="r43" name="vehicle1" value="">
-            <input type="checkbox" id="r44" name="vehicle1" value="">
-          </div>
-        <!-- </div>
-        <div class="col-sm"></div>
-      </div>
-    </div> -->
-
-    <button class="runcode_button" onclick="myFunction()"
-      style="margin-top: 18px; margin-bottom: 18px; display: block; margin-left: 48%; ">
-      <p> Run code </p>
-    </button>
-    <input type="text" id="output_answer" name="output" style="margin-left: 30px;height:32px;width:274px;" class="">
+       <p id="container"></p>
+      <p>
+        <input type="button" id="check" onclick="nowCheck()" value="Click to find maxsqure!" />
+    </p>
+    <input type="text" id="output_answer" name="output"  style="margin-left: 46px;height:32px;width:274px;" class="">
     <script src="resources/JS/assingment3.js"></script>
     <script>
 
