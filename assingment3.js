@@ -1,21 +1,21 @@
-function MaxSQ(strArr) {
-    xvalue = new Array(strArr.length + 1).fill().map
-        (row => new Array(strArr[0].length + 1).fill(0));
-    Maxvalue = 0;
+//function MaxSQ(strArr) {
+  //  xvalue = new Array(strArr.length + 1).fill().map
+  //      (row => new Array(strArr[0].length + 1).fill(0));
+  //  Maxvalue = 0;
 
-    for (i = strArr.length - 1; i >= 0; i--) {
-        for (a = strArr[0].length - 1; a >= 0; a--) {
-            if (strArr[i][a] == '0') continue;
-            xvalue[i][a] = Math.min(xvalue[i + 1][a],
-                xvalue[i][a + 1],
-                xvalue[i + 1][a + 1]) + 1;
+  //  for (i = strArr.length - 1; i >= 0; i--) {
+    //    for (a = strArr[0].length - 1; a >= 0; a--) {
+       //     if (strArr[i][a] == '0') continue;
+       //     xvalue[i][a] = Math.min(xvalue[i + 1][a],
+       //         xvalue[i][a + 1],
+        //        xvalue[i + 1][a + 1]) + 1;
 
-            Maxvalue = Math.max(Maxvalue,
-                xvalue[i][a]);
-        }
-    }
-    return Math.pow(Maxvalue, 2);
-}
+     //       Maxvalue = Math.max(Maxvalue,
+     //           xvalue[i][a]);
+     //   }
+   // }
+ ////   return Math.pow(Maxvalue, 2);
+//}
 //console.log(MaxSQ(["0111", "1101", "0111"]));
 //console.log(MaxSQ(["0111", "1111", "1111", "1111"]));
 //console.log(MaxSQ(["10100", "10111", "11111", "10010"]));
@@ -35,155 +35,72 @@ function MaxSQ(strArr) {
 
 //document.getElementById("click").addEventListener("MaxSQ", myFunction);
         
-        function myFunction() {
-            var r11,r12,r13,r14;
-            var r21,r22,r23,r24;
-            var r31,r32,r33,r34;
-            var r41,r42,r43,r44;     
-            var r1value,r2value,r3value,r4value;
+      function createChk(obj) {
+          
+          var valueb=obj.value;
+          
+        if (obj.value !== '') {
             
-            if(document.getElementById("r11").checked == true){
-                 r11 ="1"
-                
-            }
-               else{
-                 r11 ="0"
-                   
-               }
-              if(document.getElementById("r12").checked == true){
-                 r12 ="1"
-                
-            }
-               else{
-                 r12 ="0"
-                   
-               }
-              if(document.getElementById("r13").checked == true){
-                 r13 ="1"
-                
-            }
-               else{
-                 r13 ="0"
-                   
-               }
-              if(document.getElementById("r14").checked == true){
-                 r14 ="1"
-                
-            }
-               else{
-                 r14 ="0"
-                   
-               }
-             if(document.getElementById("r21").checked == true){
-                 r21 ="1"
-                
-            }
-               else{
-                 r21 ="0"
-                   
-               }
-              if(document.getElementById("r22").checked == true){
-                 r22 ="1"
-                
-            }
-               else{
-                 r22 ="0"
-                   
-               }
-              if(document.getElementById("r23").checked == true){
-                 r33 ="1"
-                
-            }
-               else{
-                 r33 ="0"
-                   
-               }
-              if(document.getElementById("r24").checked == true){
-                 r24 ="1"
-                
-            }
-               else{
-                 r24 ="0"
-                   
-               }
-             if(document.getElementById("r31").checked == true){
-                 r31 ="1"
-                
-            }
-               else{
-                 r31 ="0"
-                   
-               }
-              if(document.getElementById("r32").checked == true){
-                 r32 ="1"
-                
-            }
-               else{
-                 r32 ="0"
-                   
-               }
-              if(document.getElementById("r33").checked == true){
-                 r33 ="1"
-                
-            }
-               else{
-                 r33 ="0"
-                   
-               }
-              if(document.getElementById("r34").checked == true){
-                 r34 ="1"
-                
-            }
-               else{
-                 r34 ="0"
-                   
-               }
-             if(document.getElementById("r41").checked == true){
-                 r41 ="1"
-                
-            }
-               else{
-                 r41 ="0"
-                   
-               }
-              if(document.getElementById("r42").checked == true){
-                 r42 ="1"
-                
-            }
-               else{
-                 r42 ="0"
-                   
-               }
-              if(document.getElementById("r43").checked == true){
-                 r43 ="1"
-                
-            }
-               else{
-                 r43 ="0"
-                   
-               }
-              if(document.getElementById("r44").checked == true){
-                 r44 ="1"
-                
-            }
-               else{
-                 r44 ="0"
-                   
-               }
-            r1value = r11+r12+r13+r14; 
-            r2value = r21+r22+r23+r24;
-            r3value = r31+r32+r33+r34;
-            r4value = r41+r42+r43+r44;
-             
-           
-        //  var v1 = document.getElementById("parameter_0").value;
-        //  var v2 = document.getElementById("parameter_1").value;
-        //  var v3 = document.getElementById("parameter_2").value;
-        //  var v4 = document.getElementById("parameter_3").value;
+            for(i=1;i<=Math.pow(obj.value,2);i++)
+                {
+            var br = document.createElement("br");
+            var chk = document.createElement('input');  // CREATE CHECK BOX.
+            chk.setAttribute('type', 'checkbox');       // SPECIFY THE TYPE OF ELEMENT.
+            chk.setAttribute('id', 'prodName' + i);     // SET UNIQUE ID.
+            chk.setAttribute('value', i);
+            chk.setAttribute('name', 'products');
 
-          var result=MaxSQ([r1value,r2value,r3value,r4value]);
-          document.getElementById("output_answer").value=result;
+         
+            container.appendChild(chk);
+                    if(i==valueb)
+                        {
+                            container.appendChild(br);
+                            valueb=Number(valueb)+Number(obj.value);
+                        }
+                }
+                 document.getElementById("prod").value= '';   
+        }
+         
+    }
+          
+          function nowCheck() {
+              var count1 = 0;
+              var value1;
+        // Get all the child elements inside the container.
+        var cont = document.getElementById('container').children;
+
+        for (var i = 0; i < cont.length; i++) {
+            // Check if the element is a checkbox.
+            if (cont[i].tagName == 'INPUT' && cont[i].type == 'checkbox') {     
+                // Finally, check if the checkbox is checked.
+                if (cont[i].checked) {      
+                  //  alert(cont[i].value + ' is checked!');
+                    count1++;
+                }
+            }
+        }
+              
+             
+              for (var j = 0; j <=count1 ; j++) 
+                  {
+                     value1 = Math.pow(j,2);
+                      if(value1>=count1)
+                          {  if(value1==count1)
+                              {
+                                 document.getElementById("output_answer").value= count1;   
+                              }
+                           else{
+                               var maxsqr = Math.pow(j-1,2);
+                               document.getElementById("output_answer").value= maxsqr;
+                               }
+                             
+                              break;
+                          }
+                  }
+    }
+             
+              
           
 
 
-        }
+        
